@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout Expandable Main Area</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      display: grid;
+      grid-template-areas: 
+        "header header header"
+        "sidebar main aside"
+        "footer footer footer";
+      grid-template-columns: 200px 1fr 200px;
+      grid-template-rows: 70px 1fr 60px;
+      gap: 10px;
+      background: #f0f2f5;
+      padding: 10px;
+      transition: all 0.3s ease;
+    }
+
+    header {
+      grid-area: header;
+      background: linear-gradient(45deg, #4a90e2, #357ABD);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1.5rem;
+      padding: 0 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .toggle-btn {
+      background: white;
+      color: #4a90e2;
+      border: none;
+      padding: 8px 12px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-left: 10px;
+    }
+
+    .toggle-btn:hover {
+      background: #e0e0e0;
+    }
+
+    nav {
+      grid-area: sidebar;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    aside {
+      grid-area: aside;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    main {
+      grid-area: main;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      overflow-y: auto;
+      transition: all 0.3s ease;
+    }
+
+    footer {
+      grid-area: footer;
+      background: #4a90e2;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Hidden classes */
+    .hide {
+      display: none;
+    }
+
+    @media(max-width: 768px) {
+      body {
+        grid-template-areas: 
+          "header"
+          "main"
+          "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 1fr 60px;
+      }
+
+      nav, aside {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span>Expandable Main Layout</span>
+    <div>
+      <button class="toggle-btn" id="toggleSidebar">☰ Sidebar</button>
+      <button class="toggle-btn" id="toggleAside">☰ Aside</button>
+    </div>
+  </header>
+
+  <nav id="sidebar">
+    <h3>Sidebar</h3>
+    <ul>
+      <li>Home</li>
+      <li>Profile</li>
+      <li>Settings</li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Main Content</h2>
+    <p>Click the icons to hide the sidebar or aside. Main area will expand automatically.</p>
+  </main>
+
+  <aside id="aside">
+    <h3>Aside Section</h3>
+    <p>Additional tools or ads area.</p>
+  </aside>
+
+  <footer>
+    Footer Area © 2025
+  </footer>
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const aside = document.getElementById('aside');
+    const toggleSidebarBtn = document.getElementById('toggleSidebar');
+    const toggleAsideBtn = document.getElementById('toggleAside');
+    const body = document.body;
+
+    toggleSidebarBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('hide');
+      adjustGrid();
+    });
+
+    toggleAsideBtn.addEventListener('click', () => {
+      aside.classList.toggle('hide');
+      adjustGrid();
+    });
+
+    function adjustGrid() {
+      const sidebarHidden = sidebar.classList.contains('hide');
+      const asideHidden = aside.classList.contains('hide');
+
+      if (sidebarHidden && asideHidden) {
+        body.style.gridTemplateColumns = `0 1fr 0`;
+      } else if (sidebarHidden) {
+        body.style.gridTemplateColumns = `0 1fr 200px`;
+      } else if (asideHidden) {
+        body.style.gridTemplateColumns = `200px 1fr 0`;
+      } else {
+        body.style.gridTemplateColumns = `200px 1fr 200px`;
+      }
+    }
+  </script>
+
+</body>
+</html>

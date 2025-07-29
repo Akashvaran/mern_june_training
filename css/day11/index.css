@@ -1,0 +1,77 @@
+/* body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-areas:
+        'header header header header'
+        'nav nav nav nav'
+        'main main main aside'
+        'section1 section2 section3 aside'
+        'footer footer footer footer';
+
+        grid-template-rows: 50px 80px 1fr 100px 80px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        
+    grid-template-rows: 50px 100px 1fr 100px 50px;
+    grid-template-columns: 1fr 1fr 1fr 200px;
+}
+
+header, nav, main, aside, section, footer {
+    background-color: gainsboro;
+    border: 2px solid grey;
+   
+}
+
+header {
+    grid-area: header;
+}
+nav {
+    grid-area: nav;
+}
+main {
+    grid-area: main;
+}
+aside {
+    grid-area: aside;
+}
+footer {
+    grid-area: footer;
+}
+
+.section1 {
+    grid-area: section1;
+}
+.section2 {
+    grid-area: section2;
+}
+.section3 {
+    grid-area: section3;
+}
+
+ */
+body{
+    background-color: black;
+}
+
+ .box{
+    height: 200px;
+    width: 200px;
+    margin-top: 200px;
+    margin-left: 300px;
+    border: 2px solid red;
+    border-top: 5px solid green;
+    border-radius: 50%;
+    /* animation-name: rotate;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+    animation-iteration-count: infinite; */
+    animation: rotate 1s ease infinite;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+ }
+
+ @keyframes rotate{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+ }

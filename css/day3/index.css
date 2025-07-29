@@ -1,0 +1,65 @@
+ /* Descendant Selector (A B) */
+
+ /* div p{
+    color: green;
+    font-size: 30px;
+ } */
+
+  /* Child Selector (A > B) */
+/* .outer>p{
+    color: green;
+    font-size: 30px;
+} */
+
+ /* Adjacent Sibling Selector (A + B) */
+
+/* h1+p{
+    color: red;
+    font-size: 30px;
+} */
+
+/* General Sibling Selector (A ~ B) */
+
+/* h1~p{
+    color: red;
+    font-size: 30px;
+} */
+
+/* Attribute Selector input[type="text"]; */
+
+/* input[type="text"]{
+    border: 2px solid green;
+    height: 200px;
+    width: 200px;
+    border-radius: 25%;
+    color: greenyellow;
+} */
+
+ /* Pseudo-class Selectors */
+ button{
+    background-color: blue;
+    color: white;
+    border: none;
+    height: 50px;
+    width: 150px;
+    border-radius: 20px;
+    font-size: 20px;
+
+ }
+
+ button:hover{
+    background-color: chartreuse;
+    color: black;
+    height: 70px;
+    width: 200px;
+    font-size: 40px;
+
+ }
+
+ a{
+    text-decoration: none;
+ }
+
+ ul li{
+    list-style-type: none;
+ }

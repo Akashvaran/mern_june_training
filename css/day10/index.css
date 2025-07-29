@@ -1,0 +1,187 @@
+/* .container{
+    border: 2px solid red;
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+    transition-property: height,width,background-color;
+    transition-duration: 1s,1s,1s;
+}
+
+.container:hover{
+    height: 300px;
+    width: 300px;
+    background-color: green;
+} */
+
+/* .container{
+    border: 2px solid red;
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+.container:hover{
+    height: 300px;
+    width: 300px;
+    background-color: green;
+} */
+ 
+/* .container{
+    border: 2px solid red;
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+    transition: height,width,background-color 1s,1s,1s;
+    transition-duration: all 3s;
+    transition-delay: 1s;
+
+    transition: all 2s 2s;
+ 
+}
+
+.container:hover{
+    height: 300px;
+    width: 300px;
+    background-color: green;
+} */
+
+/* .container{
+    border: 2px solid red;
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+    transition: transform 2s ease;
+ 
+}
+
+.container:hover{
+    transform: translateY(300px);
+} */
+
+ /* .container{
+    border: 2px solid red;
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+    transition: transform 2s linear;
+ 
+}
+
+.container:hover{
+    transform: translateY(300px);
+} */
+
+ /* .container{
+    border: 2px solid red;
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+    transition: transform 2s ease-in;
+ 
+}
+
+.container:hover{
+    transform: translateY(300px);
+} */
+
+/* .container{
+    border: 2px solid red;
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+    transition: transform 2s ease-out;
+ 
+}
+
+.container:hover{
+    transform: translateY(300px);
+} */
+/* .container{
+    border: 2px solid red;
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+    transition: transform 2s ease-in-out;
+ 
+}
+
+.container:hover{
+    transform: translateY(300px);
+} */
+
+/* .container{
+    border: 2px solid red;
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+    transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1);
+ 
+}
+
+.container:hover{
+    transform: translateY(300px);
+} */
+
+/* .container{
+    height: 300px;
+    width: 300px;
+    background: linear-gradient(to bottom,red,yellow);
+} */
+
+/* .container{
+    height: 300px;
+    width: 300px;
+    background: radial-gradient(circle,orange,blue);
+} */
+
+
+/* .container{
+    height: 300px;
+    width: 300px;
+    background: radial-gradient(ellipse,orange,blue);
+} */
+/* .container{
+    height: 300px;
+    width: 300px;
+    background: conic-gradient(red, yellow, green, red);
+    border-radius: 50%;
+} */
+
+/* .container{
+    height: 300px;
+    width: 300px;
+    background: linear-gradient(to right,red,yellow,orange,blue,aqua,brown,green);
+    background: linear-gradient(to right, rgba(255,0,0,1), rgba(255,0,0,0));
+
+} */
+
+.container{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid green;
+
+}
+
+.box{
+    border: 3px solid yellowgreen;
+    height: 300px;
+    width: 300px;
+}
+
+@media (max-width:900px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+}
+@media (max-width:400px) {
+    .box{
+    border: 3px solid yellowgreen;
+    height: 100px;
+    width: 100px;
+}
+}

@@ -1,0 +1,13 @@
+.common{
+    border: 2px double red;
+    height: 200px;
+    width: 500px;
+    color: green;
+    font-size: 30px;
+    font-style: italic;
+    word-spacing: 30px;
+    
+}
+/* .different{
+
+} */
