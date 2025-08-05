@@ -44,11 +44,11 @@
 //     }
 
 
-let data=document.getElementById("datas")
+// let data=document.getElementById("datas")
 
-data.addEventListener("dblclick",function(event){
-    console.log("click")
-})
+// data.addEventListener("dblclick",function(event){
+//     console.log("click")
+// })
 
 
 

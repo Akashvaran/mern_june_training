@@ -57,16 +57,16 @@
 // console.log("error",e)
 // })
 
-async function datas() {
-    try {
-        let responce = await fetch("https://fakestoreapi.com/product")
-        let products = await responce.json()
+// async function datas() {
+//     try {
+//         let responce = await fetch("https://fakestoreapi.com/product")
+//         let products = await responce.json()
     
-        console.log(products)
+//         console.log(products)
 
-    } catch (error) {
-        console.log("this is a error",error)
-    }
-}
+//     } catch (error) {
+//         console.log("this is a error",error)
+//     }
+// }
 
-datas()
+// datas()
