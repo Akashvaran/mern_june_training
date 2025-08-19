@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .bg{
+            height: 300px;
+            width: 100%;
+        }
+        .colors{
+            background-color: black;
+        }
+    </style>
 </head>
 <body>
-    
+    <button id="btn">click</button>
+
+    <div class="bg" id="color"></div>
+
+
+    <script>
+        let value=document.getElementById("color")
+        document.getElementById("btn").addEventListener("click",()=>{
+             value.classList.toggle("colors")
+        })
+
+    </script>
 
 
 <script src="./script.js"></script>
