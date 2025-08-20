@@ -9,8 +9,10 @@
 // import { Parent } from "./day5/components/Parent"
 // import { Parent } from "./day4/Parent"
 
-import { MainRouding } from "./day6/mainrouting/MainRouding"
-import { Navbar } from "./day6/mainrouting/Navbar"
+import { MainRouding } from "./day7/mainrouting/MainRouding"
+
+// import { MainRouding } from "./day6/mainrouting/MainRouding"
+// import { Navbar } from "./day6/mainrouting/Navbar"
 
 
 function App() {
@@ -26,10 +28,11 @@ function App() {
       {/* <UseEffect/> */}
       {/* <Parent/> */}
 
-       {/* <Parent/>
+      {/* <Parent/>
        <Child1/> */}
 
-       <MainRouding/>
+      {/* <MainRouding/> */}
+      <MainRouding />
 
 
 
