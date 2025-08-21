@@ -10,6 +10,8 @@
 // import { Parent } from "./day4/Parent"
 
 import { MainRouding } from "./day7/mainrouting/MainRouding"
+import { Data } from "./day8/axios/Data"
+import { Reducer } from "./day8/usereducer/Reducer"
 
 // import { MainRouding } from "./day6/mainrouting/MainRouding"
 // import { Navbar } from "./day6/mainrouting/Navbar"
@@ -32,9 +34,11 @@ function App() {
        <Child1/> */}
 
       {/* <MainRouding/> */}
-      <MainRouding />
+      {/* <MainRouding /> */}
 
+      {/* <Reducer/> */}
 
+        <Data/>
 
     </>
   )
