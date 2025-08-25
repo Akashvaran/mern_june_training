@@ -9,9 +9,18 @@
 // import { Parent } from "./day5/components/Parent"
 // import { Parent } from "./day4/Parent"
 
-import { MainRouding } from "./day7/mainrouting/MainRouding"
-import { Data } from "./day8/axios/Data"
-import { Reducer } from "./day8/usereducer/Reducer"
+import { Child3 } from "./day10/Context/components/Child3"
+import { Child1 } from "./day10/Context/components/Child1"
+import { Child2 } from "./day10/Context/components/Child2"
+import { Parent } from "./day10/Context/components/Parent"
+import { Upload } from "./day10/fileuplode/Upload"
+import { Modelwindow } from "./day10/modelscreen/Modelwindow"
+import Callback from "./day11/usecallback/Callback"
+import { MainRouding } from "./day11/protectedRoutes/mainrouting/MainRouding"
+// import { MainRouding } from "./day7/mainrouting/MainRouding"
+// import { Data } from "./day8/axios/Data"
+// import { Reducer } from "./day8/usereducer/Reducer"
+// import FileUpload from "./day9/ButtonRef"
 
 // import { MainRouding } from "./day6/mainrouting/MainRouding"
 // import { Navbar } from "./day6/mainrouting/Navbar"
@@ -38,7 +47,23 @@ function App() {
 
       {/* <Reducer/> */}
 
-        <Data/>
+      {/* <Data/> */}
+
+
+
+      {/* <Parent>
+
+        <Child1 />
+        <Child2 />
+        <Child3 />
+      </Parent> */}
+
+      {/* <Upload/> */}
+      {/* <Modelwindow/> */}
+
+        {/* <Callback/> */}
+
+      <MainRouding/>
 
     </>
   )
