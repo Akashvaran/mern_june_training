@@ -1,59 +1,34 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useMemo } from "react";
 
-// with out usecallback
-// export default function Callback() {
-//     const [count, setCount] = useState(0);
-//     const [theme, setTheme] = useState("light");
+export default function App() {
+  const [count, setCount] = useState(0);
+  const [dark, setDark] = useState(false);
 
-//     const increment = () => setCount(count + 1);
+  const expensiveCalculation = (num) => {
+    console.log("Calculating...");
+    let result = 0;
+    for (let i = 0; i < 1000000000; i++) {
+      result += num;
+    }
+    return result;
+  };
 
-//     return (
-//         <div>
-//             <h1>{count}</h1>
-//             <Child value={increment}/>
-//             <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-//                 Toggle Theme
-//             </button>
-//         </div>
-//     );
-// }
+  // Memoized result, recalculates only when count changes
+  const memoizedResult = useMemo(() => expensiveCalculation(count), [count]);
 
-// function Child({value}) {
-//     console.log("the child is calling")
-//     return (
-//         <>
-//         <button onClick={value}>click</button>
-//         </>
-//     )
-// }
+  const theme = {
+    backgroundColor: dark ? "black" : "white",
+    color: dark ? "white" : "black",
+    minHeight: "100vh",
+    padding: "20px",
+  };
 
-// with useCallback
-
-export default function Callback() {
-    const [count, setCount] = useState(0);
-    const [theme, setTheme] = useState("light");
-
-    const increment = useCallback(() => {
-        setCount(count+1);
-    }, [count]);
-
-
-    return (
-        <div>
-            <h1>{count}</h1>
-            <Child value={increment} />
-            <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-                Toggle Theme
-            </button>
-        </div>
-    );
-}
-
-function Child({ value }) {
-    console.log("the child is calling")
-    return (
-        <>
-            <button onClick={value}>click</button>
-        </>
-    )
+  return (
+    <div style={theme}>
+      <p>Count: {count}</p>
+      <p>Expensive Calculation: {memoizedResult}</p>
+      <button onClick={() => setCount(count + 1)}>Increment Count</button>
+      <button onClick={() => setDark(!dark)}>Toggle Theme</button>
+    </div>
+  );
 }
